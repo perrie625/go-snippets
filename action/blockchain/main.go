@@ -140,7 +140,7 @@ func run() error {
 	httpAddr := os.Getenv("ADDR")
 	log.Println("Listening on ", os.Getenv("ADDR"))
 	s := &http.Server{
-		Addr:           ":" + httpAddr,
+		Addr:           httpAddr,
 		Handler:        muxServer,
 		ReadTimeout:    10 * time.Second,
 		WriteTimeout:   10 * time.Second,
